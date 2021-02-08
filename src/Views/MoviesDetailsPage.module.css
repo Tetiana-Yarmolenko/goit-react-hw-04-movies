@@ -1,0 +1,26 @@
+.Wrapper {
+  padding: 30px;
+}
+.Photo {
+  display: flex;
+  margin-left: 15px;
+}
+.FilmInfo {
+  padding: 40px;
+}
+.Img {
+  width: 300px;
+  height: 400px;
+}
+.addInfo {
+  padding: 15px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.button {
+  padding: 8px 20px;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  margin-top: 20px;
+}

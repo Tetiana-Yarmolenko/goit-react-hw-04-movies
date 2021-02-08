@@ -37,8 +37,7 @@ class MovieDetailsPage extends Component {
       vote_average,
       overview,
       release_date,
-      genres,
-        } = this.state;
+      genres,} = this.state;
 
         return (<>
             <button className={s.button} type="button" onClick={this.handleGoBack}>GO BACK</button>

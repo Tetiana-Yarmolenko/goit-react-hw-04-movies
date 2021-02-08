@@ -5,11 +5,6 @@ import './App.css';
 import routes from '../routes';
 import { ToastContainer } from 'react-toastify';
 import Loader from 'react-loader-spinner';
-// import HomeView from '../Views/HomeViews';
-// import MoviesView from '../Views/MoviesPage';
-// import MovieDetailsPage from '../Views/MovieDetailsPage';
-// import NotFoundView from "../Views/NotFoundView";
-// import AppBar from '../Components/AppBar/AppBar'
 import { lazy, Suspense } from 'react';
 
 const AppBar = lazy(() =>

@@ -15,13 +15,21 @@ class MoviesView extends Component {
 
   
   componentDidUpdate(prevProps, prevState) {
+    if (prevProps.movieName !== this.props.movieName) {
+      this.setState({movies: []})
+    }
    
-    if (prevState.movieName !== this.state.movieName) {
-      movieApi.searchMovies(this.state.movieName)
-        .then(data => 
-           this.setState({
-            movies: [...data.results]
-          }));}
+    movieApi.searchMovies(this.state.movieName)
+      .then(data => {
+        if (data.results.length === 0) { 
+          toast.error('Invalid request!');
+          return;
+        }
+        this.setState({movies: [...data.results]})
+      })
+    .catch(error => {
+        this.setState({ error });
+      });
    }
   
   render() {

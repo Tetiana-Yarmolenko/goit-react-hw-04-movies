@@ -33,6 +33,6 @@ export const getMovieCredits = id => {
 };
 export const getMovieReviews = id => {
   return fetch(
-    `${BASE_URl}/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false`,
+    `${BASE_URl}/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`,
   ).then(res => res.json());
 };

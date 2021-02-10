@@ -52,7 +52,7 @@ class MovieDetailsPage extends Component {
                 <h1>{title}({release_date})</h1>
             <p>User score: {vote_average} </p>
             <p>Overview : {overview}</p>
-            <p>Genres</p>
+            <p>Genres:</p>
             <ul>
                 {genres && genres.map(genre => (
                     <li key={genre.id}>{genre.name}</li>

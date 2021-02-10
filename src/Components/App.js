@@ -16,11 +16,11 @@ const HomeView = lazy(() =>
 );
 
 const MoviesView = lazy(() =>
-  import('../Views/MoviesPage' /* webpackChunkName: "mvies-view" */),
+  import('../Views/MoviesPage' /* webpackChunkName: "movies-view" */),
 );
 
 const MovieDetailsPage = lazy(() =>
-  import('../Views/MovieDetailsPage' /* webpackChunkName: "home-sub-view" */),
+  import('../Views/MovieDetailsPage' /* webpackChunkName: "movies-details-view" */),
 );
 
 const NotFoundView = lazy(() =>
@@ -47,7 +47,7 @@ const App = () => {
     <Switch>
     <Route exact path={routes.home} component={HomeView} />
     <Route exact path={routes.movies} component={MoviesView} />
-    <Route exact path='/movies/:moviesId' component={MovieDetailsPage} />
+    <Route  path='/movies/:moviesId' component={MovieDetailsPage} />
     <Route component={NotFoundView} />
     </Switch>
       </Suspense>

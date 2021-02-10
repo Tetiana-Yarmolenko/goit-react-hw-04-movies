@@ -9,14 +9,14 @@ export default class Reviews extends Component{
 
     componentDidMount() {
         movieApi.getMovieReviews(this.props.match.params.movieId)
-            .then(data => {this.setState({reviews: data.results})})
+            .then(data => { this.setState({ reviews: data.results}) })
         .catch(error => {
         this.setState({ error });
       });
     }
 
     render() {
-        const { reviews } = this.state;
+        const { reviews} = this.state;
         console.log(reviews);
         return (<>
             {reviews.length > 0 ? (

@@ -34,7 +34,7 @@ class MoviesView extends Component {
   
   render() {
     const { movies } = this.state;
-    const {location} = this.props
+    const { location } = this.props;
 
         return (<>
           <SearchBar onSubmit={this.handleFormSubmit} />

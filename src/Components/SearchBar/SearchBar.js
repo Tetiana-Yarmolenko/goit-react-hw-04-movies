@@ -11,9 +11,26 @@ export default class Searchbar extends Component{
     }
 
     handleSearchChange = event => {
-    this.setState({ search: event.currentTarget.value.toLowerCase()});
-    };
+        
+        const data = event.currentTarget.value.toLowerCase();
+        this.setState({ search: data });
+
+        // window.location.search = `?query=${data}`;
+        // window.history.pushState(null, null, `?query=${data}`);
+        this.props.location.search = `?query=${data}`;
+    }
+
+    componentDidMount() {
+        console.log(window.location.search);
+        const newUrl = window.location.search;
+        const getUrl = (newUrl.split('=')[1]);
+       this.props.onSubmit(getUrl);
+        // this.setState({search: getUrl })
+
+    }
     
+
+     
     handleSubmit = event => {
         event.preventDefault();
 
@@ -28,6 +45,7 @@ export default class Searchbar extends Component{
     }
     
     render() {
+        console.log(this.props);
         return (
             <form className={s.form} onSubmit={this.handleSubmit}>
                 <input

@@ -36,8 +36,9 @@ class MoviesView extends Component {
     const { movies } = this.state;
     const { location } = this.props;
 
-        return (<>
-          <SearchBar onSubmit={this.handleFormSubmit} />
+    return (<>
+          {/* додатковий пропс location */}
+          <SearchBar location={location} onSubmit={this.handleFormSubmit} />
           <ul>
             {movies.map(movie => (
               <li key={movie.id}>

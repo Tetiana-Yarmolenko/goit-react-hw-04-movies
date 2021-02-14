@@ -47,7 +47,7 @@ const App = () => {
     <Switch>
     <Route exact path={routes.home} component={HomeView} />
     <Route exact path={routes.movies} component={MoviesView} />
-    <Route  path='/movies/:moviesId' component={MovieDetailsPage} />
+    <Route  path={routes.moviesDetails} component={MovieDetailsPage} />
     <Route component={NotFoundView} />
     </Switch>
       </Suspense>

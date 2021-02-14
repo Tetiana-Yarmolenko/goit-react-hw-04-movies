@@ -25,7 +25,8 @@ class MovieDetailsPage extends Component {
 
     handleGoBack = () => {
     const { location, history } = this.props;
-    history.push(location?.state?.from || routes.home );
+        history.push(location?.state?.from || routes.home);
+        console.log(location.state.from);
     }
    
     render() {
@@ -63,8 +64,6 @@ class MovieDetailsPage extends Component {
 
             <p>Additional information</p>
                 <ul>
-
-        {/* Не працює вкладена навігація, не розумію, що роблю не так             */}
           <NavLink to={`/movies/${id}/cast`}>
             <li className={s.addInfo}>Cast</li>
           </NavLink>
